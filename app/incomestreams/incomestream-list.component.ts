@@ -9,34 +9,40 @@ import { Component } from '@angular/core';
 })
 export class IncomeStreamListComponent {
     pageTitle: string = 'Income Stream List';
+    imageWidth: number = 50;
+    imageMargin: number = 2;
     incomestreams: any[] = [
         {
             "incomeStreamId": 1,
-            "IncomeStreamName": "Council Tax",
+            "incomeStreamName": "Council Tax",
             "generalLedgerCode": "G35355260700000",
             "vattable": "false",
-            "fundCode": "09"
+            "fundCode": "09",
+            "imageUrl": "https://openclipart.org/image/50px/svg_to_png/210224/misc-coin.png&disposition=attachment"
         },
         {
             "incomeStreamId": 2,
-            "IncomeStreamName": "Council Tax",
+            "incomeStreamName": "Council Tax",
             "generalLedgerCode": "G35355260700000",
             "vattable": "false",
-            "fundCode": "04"
+            "fundCode": "04",
+            "imageUrl": "https://openclipart.org/image/50px/svg_to_png/171507/treasure.png&disposition=attachment"
         },
         {
             "incomeStreamId": 3,
-            "IncomeStreamName": "Harbours",
+            "incomeStreamName": "Harbours",
             "generalLedgerCode": "G35355260700000",
             "vattable": "false",
-            "fundCode": "04"
+            "fundCode": "04",
+            "imageUrl": "https://openclipart.org/image/50px/svg_to_png/48349/ATTENT03.png&disposition=attachment"
         },
         {
             "incomeStreamId": 4,
-            "IncomeStreamName": "Harbours",
+            "incomeStreamName": "Harbours",
             "generalLedgerCode": "G35355260700000",
             "vattable": "false",
-            "fundCode": "04"
+            "fundCode": "04",
+            "imageUrl": "https://openclipart.org/image/50px/svg_to_png/127183/pessoas.png&disposition=attachment"
         },
 
     ]

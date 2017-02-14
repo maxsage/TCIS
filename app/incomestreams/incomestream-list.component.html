@@ -14,23 +14,36 @@
                 <h3>Filtered by:</h3>
             </div>
         </div>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>
-                        <button class="btn btn-primary">
-                            Show Image
-                        </button>
-                    </th>
-                    <th>Income Stream</th>
-                    <th>GL Code</th>
-                    <th>Vattable</th>
-                    <th>Fund Code</th>
-                </tr>
-            </thead>
-            <tbody>
-
-            </tbody>
-        </table>
+        <div class="table-responsive" >
+            <table class="table" *ngIf="incomestreams && incomestreams.length">
+                <thead>
+                    <tr>
+                        <th>
+                            <button class="btn btn-primary">
+                                Show Image
+                            </button>
+                        </th>
+                        <th>Income Stream</th>
+                        <th>GL Code</th>
+                        <th>Vattable</th>
+                        <th>Fund Code</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let incomestream of incomestreams">
+                        <td>
+                            <img [src]="incomestream.imageUrl"
+                                [title]="incomestream.incomeStreamName"
+                                [style.width.px]="imageWidth"
+                                [style.margin.px]="imageMargin"/>
+                        </td>
+                        <td>{{incomestream.incomeStreamName}}</td>
+                        <td>{{incomestream.generalLedgerCode}}</td>
+                        <td>{{incomestream.vattable}}</td>
+                        <td>{{incomestream.fundCode}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
