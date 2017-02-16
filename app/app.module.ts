@@ -1,12 +1,19 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent }  from './app.component';
 import {IncomeStreamListComponent} from "./incomestreams/incomestream-list.component";
+import {IncomeStreamFilterPipe} from "./incomestreams/incomestream-filter.pipe";
 
 @NgModule({
-  imports: [ BrowserModule ],
-  declarations: [ AppComponent, IncomeStreamListComponent ],
+  imports: [
+      BrowserModule,
+      FormsModule
+  ],
+  declarations: [ AppComponent,
+      IncomeStreamListComponent,
+      IncomeStreamFilterPipe ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

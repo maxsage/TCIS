@@ -1,24 +1,32 @@
 /**
  * Created by csit011 on 07/02/2017.
  */
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import {IIncomeStream} from "./incomestream";
 
 @Component ({
     selector: 'im-incomestreams',
-    templateUrl: 'app/incomestreams/incomestream-list.component.html'
+    moduleId: module.id,
+    templateUrl: 'incomestream-list.component.html',
+    styleUrls: ['incomestream-list.component.css']
 })
-export class IncomeStreamListComponent {
+export class IncomeStreamListComponent
+                        implements OnInit {
     pageTitle: string = 'Income Stream List';
     imageWidth: number = 50;
     imageMargin: number = 2;
-    incomestreams: any[] = [
+    showImage: boolean = false;
+    listFilter: string = "Council";
+    incomestreams: IIncomeStream[] = [
         {
             "incomeStreamId": 1,
             "incomeStreamName": "Council Tax",
             "generalLedgerCode": "G35355260700000",
             "vattable": "false",
             "fundCode": "09",
-            "imageUrl": "https://openclipart.org/image/50px/svg_to_png/210224/misc-coin.png&disposition=attachment"
+            "averageTransaction": "3.75",
+            "checkDate": "01/07/2015",
+            "imageUrl": "https://openclipart.org/image/50px/svg_to_png/210224/misc-coin.png&disposition=attachment",
         },
         {
             "incomeStreamId": 2,
@@ -26,6 +34,8 @@ export class IncomeStreamListComponent {
             "generalLedgerCode": "G35355260700000",
             "vattable": "false",
             "fundCode": "04",
+            "averageTransaction": "3.751",
+            "checkDate": "01/08/2015",
             "imageUrl": "https://openclipart.org/image/50px/svg_to_png/171507/treasure.png&disposition=attachment"
         },
         {
@@ -34,6 +44,8 @@ export class IncomeStreamListComponent {
             "generalLedgerCode": "G35355260700000",
             "vattable": "false",
             "fundCode": "04",
+            "averageTransaction": "003.75",
+            "checkDate": "01/07/2015",
             "imageUrl": "https://openclipart.org/image/50px/svg_to_png/48349/ATTENT03.png&disposition=attachment"
         },
         {
@@ -42,11 +54,20 @@ export class IncomeStreamListComponent {
             "generalLedgerCode": "G35355260700000",
             "vattable": "false",
             "fundCode": "04",
+            "averageTransaction": "312.75",
+            "checkDate": "01/07/2015",
             "imageUrl": "https://openclipart.org/image/50px/svg_to_png/127183/pessoas.png&disposition=attachment"
         },
 
-    ]
+    ];
 
+    toggleImage(): void {
+        this.showImage = !this.showImage;
+    }
+
+    ngOnInit(): void {
+        console.log('In OnInit');
+    }
 
 
 }
