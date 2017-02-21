@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent }  from './app.component';
 import {IncomeStreamListComponent} from "./incomestreams/incomestream-list.component";
 import {IncomeStreamFilterPipe} from "./incomestreams/incomestream-filter.pipe";
+import {StarComponent} from "./shared/star.component";
 
 @NgModule({
   imports: [
@@ -13,7 +14,9 @@ import {IncomeStreamFilterPipe} from "./incomestreams/incomestream-filter.pipe";
   ],
   declarations: [ AppComponent,
       IncomeStreamListComponent,
-      IncomeStreamFilterPipe ],
+      IncomeStreamFilterPipe,
+      StarComponent
+      ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

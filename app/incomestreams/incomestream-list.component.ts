@@ -25,7 +25,8 @@ export class IncomeStreamListComponent
             "vattable": "false",
             "fundCode": "09",
             "averageTransaction": "3.75",
-            "checkDate": "01/07/2015",
+            "usageRating": "2.7",
+            "checkCurrentDate": "01/07/2015",
             "imageUrl": "https://openclipart.org/image/50px/svg_to_png/210224/misc-coin.png&disposition=attachment",
         },
         {
@@ -35,7 +36,8 @@ export class IncomeStreamListComponent
             "vattable": "false",
             "fundCode": "04",
             "averageTransaction": "3.751",
-            "checkDate": "01/08/2015",
+            "usageRating": "1.9",
+            "checkCurrentDate": "01/08/2015",
             "imageUrl": "https://openclipart.org/image/50px/svg_to_png/171507/treasure.png&disposition=attachment"
         },
         {
@@ -45,7 +47,8 @@ export class IncomeStreamListComponent
             "vattable": "false",
             "fundCode": "04",
             "averageTransaction": "003.75",
-            "checkDate": "01/07/2015",
+            "usageRating": "2.8",
+            "checkCurrentDate": "01/07/2015",
             "imageUrl": "https://openclipart.org/image/50px/svg_to_png/48349/ATTENT03.png&disposition=attachment"
         },
         {
@@ -55,7 +58,8 @@ export class IncomeStreamListComponent
             "vattable": "false",
             "fundCode": "04",
             "averageTransaction": "312.75",
-            "checkDate": "01/07/2015",
+            "usageRating": "4.9",
+            "checkCurrentDate": "01/07/2015",
             "imageUrl": "https://openclipart.org/image/50px/svg_to_png/127183/pessoas.png&disposition=attachment"
         },
 
@@ -69,6 +73,8 @@ export class IncomeStreamListComponent
         console.log('In OnInit');
     }
 
-
+    onRatingClicked(message: string): void {
+        this.pageTitle = "Income Stream List: " + message;
+    }
 }
 

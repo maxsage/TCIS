@@ -5,6 +5,7 @@ export interface IIncomeStream {
     vattable: string;
     fundCode: string;
     averageTransaction: string;
-    checkDate: string;
+    usageRating: string;
+    checkCurrentDate: string;
     imageUrl: string;
 }

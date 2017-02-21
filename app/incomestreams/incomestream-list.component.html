@@ -28,9 +28,11 @@
                         <th>Income Stream</th>
                         <th>GL Code</th>
                         <th>Vattable</th>
-                        <th>Average Transaction</th>
-                        <th>Last Checked</th>
                         <th>Fund Code</th>
+                        <th>Average Transaction</th>
+                        <th>Usage Rating</th>
+                        <th>Last Checked</th>
+
                     </tr>
                 </thead>
                 <tbody>
@@ -45,9 +47,14 @@
                         <td>{{incomestream.incomeStreamName}}</td>
                         <td>{{incomestream.generalLedgerCode | uppercase}}</td>
                         <td>{{incomestream.vattable}}</td>
-                        <td>{{incomestream.averageTransaction | currency:"GBP":true:"1.2-2"}}</td>
-                        <td>{{incomestream.checkDate | date}}</td>
                         <td>{{incomestream.fundCode}}</td>
+                        <td>{{incomestream.averageTransaction | currency:"GBP":true:"1.2-2"}}</td>
+                        <td>
+                            <tc-star [rating]="incomestream.usageRating"
+                                (ratingClicked)="onRatingClicked($event)"></tc-star>
+                        </td>
+                        <td>{{incomestream.checkDate | date}}</td>
+
                     </tr>
                 </tbody>
             </table>
